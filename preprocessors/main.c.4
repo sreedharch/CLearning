@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+#if !defined(MESSAGE)
+#define MESSAGE "FOO"
+#endif
+
+int main() { printf("Here is the message: %s\n", MESSAGE); }

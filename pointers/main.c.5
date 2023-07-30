@@ -1,0 +1,18 @@
+/*POINTER TO POINTER*/
+#include <stdio.h>
+
+int main() {
+  int var;
+  int *ptr;
+  int **pptr;
+
+  var =3000;
+
+  ptr = &var; //get the address of var
+
+  pptr = &ptr; //get the address of ptr using & operator
+
+  printf("Value of var = %d\n", var);
+  printf("Value available at *ptr = %d\n", *ptr);
+  printf("Value available at **pptr = %d\n", **pptr);
+}

@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+const int MAX = 3;
+
+int main() {
+  int var[] = {10, 100, 200};
+  int i, *ptr;
+
+  printf("INCREMENTING POINTER\n");
+  ptr = var;
+
+  for (i = 0; i < MAX; i++) {
+    printf("Address of var[%d] = %x\n", i, ptr);
+    printf("Value of var[%d] = %d\n", i, *ptr);
+    ptr++; // move to next location
+  }
+
+  printf("\n");
+  printf("DECREMENTING POINTER\n");
+  ptr = &var[MAX - 1];
+  for (i = 0; i < MAX; i++) {
+    printf("Address of var[%d] = %x\n", i, ptr);
+    printf("Value of var[%d] = %d\n", i, *ptr);
+    ptr--; // move to previous location
+  }
+
+  printf("\n");
+  printf("POINTER COMPARISONS\n");
+  ptr = var;
+  i = 0;
+  while (ptr <= &var[MAX - 1]) {
+    printf("Address of var[%d] = %x\n", i, ptr);
+    printf("Value of var[%d] = %d\n", i, *ptr);
+    ptr++; // move to next location
+    i++;
+  }
+}
